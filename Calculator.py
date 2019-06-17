@@ -1,15 +1,17 @@
 def a():
   a=input("Enter first number:")
-  if a>='a' and a<='z' or a>='A' and a<='Z' or a>='!' and a<='/' or a>=':' and a<='@' or a>='[' and a<='`' or a>='{' and a<='~':
+  a=rule(a)
+  if a==0:
     print("INVALID")
     return 0
   else:
     a=float(a)
     return a
-
+    
 def b():
   b=input("Enter second number:")
-  if b>='a' and b<='z' or b>='A' and b<='Z' or b>='!' and b<='/' or b>=':' and b<='@' or b>='[' and b<='`' or b>='{' and b<='~':
+  b=rule(b)
+  if b==0:
     print("INVALID")
     return 0
   else:
@@ -18,7 +20,8 @@ def b():
 
 def c():
   c=input("Choose any operation:\n1.Addition\n2.Subraction\n3.Multiplication\n4.Division\n")
-  if c>='a' and c<='z' or c>='A' and c<='Z' or c>='!' and c<='/' or c>=':' and c<='@' or c>='[' and c<='`' or c>='{' and c<='~':
+  c=rule(c)
+  if c==0:
     print("INVALID")
     return 0
   else:
@@ -39,18 +42,24 @@ def check(in1,in2,in3):
     else:
       print("QUOTIENT=",in1/in2)
   else:
-    print("ERROR")
-
+    return 
+    
+def rule(inp):
+  if inp>='a' and inp<='z' or inp>='A' and inp<='Z' or inp>='!' and inp<='/' or inp>=':' and inp<='@' or inp>='[' and inp<='`' or inp>='{' and inp<='~' or inp==' ' or inp=='' or inp=='\t':
+    return 0
+  else:
+    return inp
 in1=0
 in2=0
 in3=0
+in4=0
 while in1==0:
   in1=a()
 else:
   while in2==0:
     in2=b()
   else:
-    while in3==0:
+    while in3==0 and in3<=0 or in3>4:
       in3=c()
     else:
-      check(in1,in2,in3)
+        check(in1,in2,in3)
