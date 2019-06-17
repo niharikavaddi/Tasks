@@ -22,7 +22,7 @@ void createnode()
 void data()
 {
 	unsigned int first,test,num,i;
-	cout<<"enter number of test cases";
+	cout<<"enter the number of test cases";
 	cin>>test>>first;
 	createnode();
 	push(first);
