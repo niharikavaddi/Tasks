@@ -1,5 +1,5 @@
 def a():
-  a=input("Enter first number:")
+  a=input("Enter the first number:")
   a=rule(a)
   if a==0:
     print("INVALID")
@@ -9,7 +9,7 @@ def a():
     return a
     
 def b():
-  b=input("Enter second number:")
+  b=input("Enter the second number:")
   b=rule(b)
   if b==0:
     print("INVALID")
